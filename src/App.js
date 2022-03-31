@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { AboutMePage } from "./components/AboutMePage";
+import { ContactMePage } from "./components/ContactMePage";
+import { Footer } from "./components/Footer";
+import { MainPage } from "./components/MainPage";
+import { Navbar } from "./components/Navbar";
+import { ProjectsPage } from "./components/ProjectsPage";
+
+import { Flex } from "@chakra-ui/react";
+import { useState } from "react";
 
 function App() {
+  const [isAboutShown, showAbout] = useState(false);
+  const [isProjectsShown, showProjects] = useState(false);
+  const [isContactShown, showContact] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Flex className="App" flexDir="column" height="100%" flex="1">
+      <Navbar
+        showAbout={showAbout}
+        showProjects={showProjects}
+        showContact={showContact}
+      />
+      {isAboutShown ? (
+        <AboutMePage
+          showAbout={showAbout}
+          showProjects={showProjects}
+          showContact={showContact}
+        />
+      ) : isProjectsShown ? (
+        <ProjectsPage />
+      ) : isContactShown ? (
+        <ContactMePage />
+      ) : (
+        <MainPage
+          showAbout={showAbout}
+          showProjects={showProjects}
+          showContact={showContact}
+        />
+      )}
+      <Footer />
+    </Flex>
   );
 }
 

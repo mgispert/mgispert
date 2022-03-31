@@ -1,0 +1,22 @@
+.card {
+  background-color: #1a202c;
+  width: 300px;
+  min-height: 90px;
+  border: 3px solid #07b5d8;
+  box-shadow: 10px -10px 0 -3px #1a202c, 10px -10px #0bc5ea,
+    20px -20px 0 -3px #1a202c, 20px -20px #76e4f7, 30px -30px 0 -3px #1a202c,
+    30px -30px #9decf9, 40px -40px 0 -3px #1a202c, 40px -40px #c4f1f9;
+  transition: box-shadow 1s, top 1s, left 1s;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.card:hover {
+  top: -40px;
+  left: 40px;
+  box-shadow: 0 0 0 -3px #1a202c, 0 0 0 0 #0bc5ea, 0 0 0 -3px #1a202c,
+    0 0 0 0 #76e4f7, 0 0 0 -3px #1a202c, 0 0 0 0 #9decf9, 0 0 0 -3px #1a202c,
+    0 0 0 0 #c4f1f9;
+}
