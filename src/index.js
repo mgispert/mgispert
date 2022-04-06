@@ -27,14 +27,91 @@ const mgispertTheme = extendTheme({
     }),
   },
   fonts: {
-    heading: "Rampart One, cursive",
+    heading: "Audiowide",
     body: "Raleway, sans-serif",
   },
   components: {
-    Buttons: {
-      _hover: {
-        backgroundColor: "cyan.200",
-        boxShadow: "#9decf9 0px 0px 17px 10px ",
+    Text: {
+      variants: {
+        main: {
+          letterSpacing: "3px",
+          fontSize: { base: "13px", sm: "15px", md: "16px" },
+          lineHeight: "3rem",
+          fontFamily: "Raleway, sans-serif",
+        },
+        heading: {
+          fontFamily: "Audiowide",
+          fontWeight: "600",
+          fontSize: { base: "2xl", sm: "4xl", md: "6xl" },
+        },
+        card: {
+          fontFamily: "Raleway, sans-serif",
+          lineHeight: "1.75rem",
+          fontSize: { base: "13px", sm: "15px", md: "16px" },
+          color: "#9fadbf",
+          backgroundColor: "rgb(26 32 44)",
+        },
+      },
+    },
+
+    Button: {
+      variants: {
+        outline: {
+          letterSpacing: "3px",
+          fontWeight: "light",
+          width: "9rem",
+          color: "white",
+          borderRadius: "0px",
+          borderColor: "transparent",
+          backgroundColor: "transparent",
+          fontSize: { base: "13px", sm: "15px", md: "16px" },
+          transition: "border-color , ease-in-out",
+          _hover: {
+            borderTopColor: "cyan.300",
+            color: "white",
+            backgroundColor: "transparent",
+            textDecoration: "none",
+          },
+          _active: {
+            backgroundColor: "transparent",
+            borderBottomColor: "cyan.300",
+          },
+          _focus: {
+            borderColor: "transparent",
+            borderBottomColor: "cyan.300",
+            boxShadow: "transparent",
+          },
+        },
+        solid: {
+          letterSpacing: "3px",
+          fontWeight: "light",
+          width: "9rem",
+          color: "white",
+          borderRadius: "0px",
+          borderWidth: "1px",
+          borderColor: "cyan.300",
+          borderBottomColor: "cyan.300",
+          borderLeftColor: "transparent",
+          borderRightColor: "transparent",
+          backgroundColor: "transparent",
+          fontSize: { base: "13px", sm: "15px", md: "16px" },
+          transition: "width , letter-spacing, ease-in-out 1s",
+          _hover: {
+            width: "15rem",
+            letterSpacing: "8px",
+            backgroundColor: "transparent",
+          },
+          _active: {
+            backgroundColor: "transparent",
+          },
+          _focus: {
+            borderColor: "cyan.200",
+            boxShadow: "transparent",
+          },
+        },
+      },
+      defaultProps: {
+        variants: "outline",
       },
     },
   },

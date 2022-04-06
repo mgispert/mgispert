@@ -1,94 +1,62 @@
 import React from "react";
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Flex,
-  Image,
-  IconButton,
-  Button,
-} from "@chakra-ui/react";
-import {
-  HamburgerIcon,
-  CalendarIcon,
-  ChatIcon,
-  InfoOutlineIcon,
-} from "@chakra-ui/icons";
+import { Image, Button, Flex, Link } from "@chakra-ui/react";
 
 export const Navbar = ({ showAbout, showProjects, showContact }) => {
   return (
     <Flex
       justifyContent={"space-between"}
       alignItems={"center"}
-      margin={"1rem"}
+      margin={{ base: "0.5rem", sm: "1rem", md: "2rem" }}
     >
-      <Button
+      <Link
         onClick={() => {
           showAbout(false);
           showProjects(false);
           showContact(false);
         }}
-        bgColor="transparent"
-        _hover={{ backgroundColor: "transparent" }}
-        _active={{ backgroundColor: "transparent", borderColor: "transparent" }}
-        _focus={{ backgroundColor: "transparent", borderColor: "transparent" }}
       >
-        <Image src={"/images/ghostblue.png"} maxH="40px" />
-      </Button>
-      <Menu borderolor="#07b1d4" color="white">
-        <MenuButton
-          as={IconButton}
-          aria-label="Options"
-          icon={<HamburgerIcon />}
-          variant="outline"
-          borderColor={"#07b5d8"}
-          backgroundColor={"#07b5d8"}
-          borderRadius="50%"
-          color="#c4f1f9"
-          _hover={{
-            boxShadow: "#9decf9 0px 0px 17px 10px ",
-          }}
-          _focus={{ borderColor: "transparent" }}
-          _active={{
-            borderColor: "#07b5d8",
-            backgroundColor: "#07b5d8",
-            boxShadow: "#9decf9 0px 0px 17px 10px ",
-          }}
+        <Image
+          src={"/images/ghostblue.png"}
+          maxH={{ base: "70px", sm: "40px", md: "40px" }}
         />
-        <MenuList color="white">
-          <MenuItem
-            icon={<InfoOutlineIcon />}
-            onClick={() => {
-              showAbout(true);
-              showProjects(false);
-              showContact(false);
-            }}
-          >
-            About MGispert
-          </MenuItem>
-          <MenuItem
-            icon={<CalendarIcon />}
-            onClick={() => {
-              showAbout(false);
-              showProjects(true);
-              showContact(false);
-            }}
-          >
-            Last projects
-          </MenuItem>
-          <MenuItem
-            icon={<ChatIcon />}
-            onClick={() => {
-              showAbout(false);
-              showProjects(false);
-              showContact(true);
-            }}
-          >
-            Contact me
-          </MenuItem>
-        </MenuList>
-      </Menu>
+      </Link>
+      <Flex
+        alignItems="center"
+        justifyItems="center"
+        gap={{ base: "0", sm: "1rem", md: "2rem" }}
+        flexWrap="wrap"
+      >
+        <Button
+          variant="outline"
+          onClick={() => {
+            showAbout(true);
+            showProjects(false);
+            showContact(false);
+          }}
+        >
+          About
+        </Button>
+        <Button
+          variant="outline"
+          onClick={() => {
+            showAbout(false);
+            showProjects(true);
+            showContact(false);
+          }}
+        >
+          Projects
+        </Button>
+        <Button
+          variant="outline"
+          onClick={() => {
+            showAbout(false);
+            showProjects(false);
+            showContact(true);
+          }}
+        >
+          Contact
+        </Button>
+      </Flex>
     </Flex>
   );
 };

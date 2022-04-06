@@ -21,16 +21,21 @@ export const ProjectsPage = () => {
       justifyContent="space-evenly"
       alignItems="center"
       height="100%"
+      marginTop={{ base: "20rem", sm: "7rem", md: "2rem" }}
     >
       <Heading
-        fontWeight={600}
-        fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-        lineHeight={"5rem"}
+        lineHeight={{ base: "1rem", sm: "2rem", md: "4rem" }}
         marginBottom="7rem"
       >
-        Check out my last
+        <Text variant="heading">Check out my last</Text>
+
         <br />
-        <Text as={"span"} color={"cyan.500"}>
+        <Text
+          variant="heading"
+          as={"span"}
+          bgGradient="linear(to-l,#C4F1F9, #00A3C4 )"
+          bgClip="text"
+        >
           projects!
         </Text>
       </Heading>
@@ -41,33 +46,38 @@ export const ProjectsPage = () => {
         gap="5rem"
         flexWrap="wrap"
         marginBottom="3rem"
+        marginRight={{ base: "2.5rem", sm: "0", md: "0" }}
       >
         <Link
           target={"_blank"}
           href="https://mgispert.github.io/squareMatch/"
           _hover={{ textDecor: "none" }}
+          _focus={{ borderColor: "none" }}
         >
           <Flex
             p={4}
             flexDir="column"
             justifyContent={"flex-start"}
-            maxW="15rem"
-            height="20rem"
             textAlign="left"
             className="card"
+            maxWidth={{ base: "11rem", sm: "13rem", md: "15rem" }}
+            height={{ base: "15rem", sm: "17rem", md: "20rem" }}
+            overflow={{ base: "scroll", sm: "scroll", md: "unset" }}
           >
             <Text
+              variant="card"
               fontWeight={600}
               as={Flex}
               justifyContent="space-evenly"
               alignItems="center"
+              color="white"
             >
               <RiGameLine />
               SQUARE MATCH
               <RiGameLine />
             </Text>
             <br />
-            <Text color={"gray.400"} lineHeight="2rem">
+            <Text variant="card">
               Memory game created with CSS, HTML, and JavaScript
               <List marginTop={"1rem"}>
                 <ListItem>
@@ -81,17 +91,21 @@ export const ProjectsPage = () => {
           target={"_blank"}
           href="https://dozema-coffee.herokuapp.com/"
           _hover={{ textDecor: "none" }}
+          _focus={{ borderColor: "none" }}
         >
           <Flex
             p={4}
             flexDir="column"
             justifyContent="flex-start"
-            maxW="15rem"
-            height="20rem"
+            maxWidth={{ base: "11rem", sm: "13rem", md: "15rem" }}
+            height={{ base: "15rem", sm: "17rem", md: "20rem" }}
+            overflow={{ base: "scroll", sm: "scroll", md: "unset" }}
             textAlign="left"
             className="card"
           >
             <Text
+              color="white"
+              variant="card"
               fontWeight={600}
               as={Flex}
               justifyContent="space-evenly"
@@ -101,7 +115,7 @@ export const ProjectsPage = () => {
               DoZeMa Coffee <FiCoffee />
             </Text>
             <br />
-            <Text color={"gray.400"} lineHeight="2rem">
+            <Text variant="card">
               Workplace finder created with Bootstap, HandleBars, Express.js,
               Node.js, JS, and MongoDB
               <List marginTop={"1rem"}>
@@ -122,17 +136,21 @@ export const ProjectsPage = () => {
           target={"_blank"}
           href="https://mirrorcare.netlify.app/"
           _hover={{ textDecor: "none" }}
+          _focus={{ borderColor: "none" }}
         >
           <Flex
             p={4}
             flexDir="column"
             justifyContent="flex-start"
-            maxW="15rem"
-            height="20rem"
             textAlign="left"
             className="card"
+            maxWidth={{ base: "11rem", sm: "13rem", md: "15rem" }}
+            height={{ base: "15rem", sm: "17rem", md: "20rem" }}
+            overflow={{ base: "scroll", sm: "scroll", md: "unset" }}
           >
             <Text
+              variant="card"
+              color="white"
               fontWeight={600}
               as={Flex}
               justifyContent="space-evenly"
@@ -141,7 +159,7 @@ export const ProjectsPage = () => {
               <GiMirrorMirror /> Mirror <GiMirrorMirror />
             </Text>
             <br />
-            <Text color={"gray.400"} lineHeight="2rem">
+            <Text variant="card">
               Mental health web app created with Chakra UI, HTML, Express.js,
               Node.js, React.js, MongoDB, and JS
               <List marginTop={"1rem"}>
@@ -160,17 +178,21 @@ export const ProjectsPage = () => {
           target={"_blank"}
           href="https://mgispert-catlery-backercamp.vercel.app/"
           _hover={{ textDecor: "none" }}
+          _focus={{ borderColor: "none" }}
         >
           <Flex
             p={4}
             flexDir="column"
             justifyContent="flex-start"
-            maxW="15rem"
-            height="20rem"
+            maxWidth={{ base: "11rem", sm: "13rem", md: "15rem" }}
+            height={{ base: "15rem", sm: "17rem", md: "20rem" }}
+            overflow={{ base: "scroll", sm: "scroll", md: "unset" }}
             textAlign="left"
             className="card"
           >
             <Text
+              variant="card"
+              color="white"
               fontWeight={600}
               as={Flex}
               justifyContent="space-evenly"
@@ -179,7 +201,7 @@ export const ProjectsPage = () => {
               <FaPaw /> Catlery <FaPaw />
             </Text>
             <br />
-            <Text color={"gray.400"} lineHeight="2rem">
+            <Text variant="card">
               Cat Gallery created with Chakra UI, React.js, Redux, Redux Saga,
               and JavaScript
               <List marginTop={"1rem"}>

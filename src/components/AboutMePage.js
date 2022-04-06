@@ -11,39 +11,32 @@ export const AboutMePage = ({ showProjects, showAbout, showContact }) => {
       height="100%"
       marginTop="3rem"
     >
-      <Heading
-        fontWeight={600}
-        fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-        textAlign="left"
-        marginBottom="3rem"
-      >
-        About{" "}
-        <Text as={"span"} color={"cyan.500"}>
+      <Heading textAlign="left" marginBottom="3rem" as={Flex}>
+        <Text variant="heading">About&nbsp;</Text>
+        <Text
+          as={"span"}
+          variant="heading"
+          bgGradient="linear(to-l,#C4F1F9, #00A3C4 )"
+          bgClip="text"
+        >
           MGispert
         </Text>
       </Heading>
 
-      <Box
-        maxWidth={"60%"}
-        lineHeight={"3rem"}
-        textAlign="left"
-        letterSpacing={"3px"}
-        fontSize="17px"
-        margin="0 auto"
-      >
-        <Text>
+      <Box maxWidth={"60%"} textAlign="left" margin="0 auto">
+        <Text variant="main">
           I'm a Full-Stack Developer based in Barcelona. I have a background in
           Education.
           <br />
           Yes, I was one of those high-school teachers that you remember when
           you get older.
         </Text>
-        <Text>
+        <Text variant="main">
           My passion for teaching and helping students exploded when I got into
           the tech world, I discovered I could bring ideas to life and help
           other people do the same, they just need to hand me a concept.
         </Text>
-        <Text>
+        <Text variant="main">
           I'm a fan of list-creating, English Literature, and mythology. To sum
           up, I'm a geek.
           <br />
@@ -52,18 +45,13 @@ export const AboutMePage = ({ showProjects, showAbout, showContact }) => {
       </Box>
 
       <Button
-        colorScheme={"blue"}
-        bg={"cyan.500"}
-        rounded={"full"}
+        variant="solid"
+        padding="1rem"
         px={6}
         onClick={() => {
           showAbout(false);
           showProjects(true);
           showContact(false);
-        }}
-        _hover={{
-          bg: "cyan.200",
-          boxShadow: "#9decf9 0px 0px 17px 10px ",
         }}
       >
         Check my last projects

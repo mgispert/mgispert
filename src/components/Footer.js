@@ -11,7 +11,9 @@ export const Footer = () => {
       position="relative"
       paddingTop={"1rem"}
     >
-      <Text margin={"5px"}>MGispert 2022 &nbsp; </Text>
+      <Text margin={"5px"} variant="main">
+        MGispert 2022 &nbsp;{" "}
+      </Text>
       <FaGhost />
     </Container>
   );
