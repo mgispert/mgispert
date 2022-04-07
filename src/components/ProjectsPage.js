@@ -20,8 +20,7 @@ export const ProjectsPage = () => {
       flexDir={"column"}
       justifyContent="space-evenly"
       alignItems="center"
-      height="100%"
-      marginTop={{ base: "20rem", sm: "7rem", md: "2rem" }}
+      marginTop={{ base: "2rem", sm: "2rem", md: "2rem" }}
     >
       <Heading
         lineHeight={{ base: "1rem", sm: "2rem", md: "4rem" }}

@@ -17,6 +17,7 @@ export const ContactMePage = () => {
       flexDir={"column"}
       justifyContent="center"
       alignItems="center"
+      padding="0 2rem"
       height="100%"
     >
       <Heading

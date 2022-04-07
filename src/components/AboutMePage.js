@@ -8,12 +8,11 @@ export const AboutMePage = ({ onClickProjects }) => {
       justifyContent={"space-enely"}
       alignItems={"center"}
       gap={"3rem"}
-      height="100%"
       marginTop="3rem"
     >
       <Heading
         textAlign="left"
-        marginBottom={{ base: "0", sm: "1rem", md: "3rem" }}
+        marginBottom={{ base: "0", sm: "1rem", md: "1rem" }}
         as={Flex}
       >
         <Text variant="heading">About&nbsp;</Text>
@@ -53,7 +52,7 @@ export const AboutMePage = ({ onClickProjects }) => {
         padding="1rem"
         px={6}
         onClick={onClickProjects}
-        marginBottom="1rem"
+        marginBottom={{ base: "1rem", sm: "2rem", md: "2rem" }}
       >
         Check my last projects
       </Button>
