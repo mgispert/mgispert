@@ -1,6 +1,6 @@
 import { Box, Heading, Container, Text, Button, Stack } from "@chakra-ui/react";
 
-export const MainPage = (onClickProjects) => {
+export const MainPage = ({ onClickAbout }) => {
   return (
     <>
       <Container maxW={"3xl"}>
@@ -36,7 +36,7 @@ export const MainPage = (onClickProjects) => {
             alignSelf={"center"}
             position={"relative"}
           >
-            <Button variant="solid" onClick={onClickProjects}>
+            <Button variant="solid" onClick={onClickAbout}>
               About me
             </Button>
           </Stack>
