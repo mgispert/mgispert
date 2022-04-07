@@ -79,7 +79,7 @@ const mgispertTheme = extendTheme({
           _focus: {
             borderColor: "transparent",
             borderBottomColor: "cyan.300",
-            boxShadow: "transparent",
+            boxShadow: "0px 0px transparent",
           },
         },
         solid: {
