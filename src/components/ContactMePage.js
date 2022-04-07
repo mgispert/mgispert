@@ -53,6 +53,7 @@ export const ContactMePage = () => {
         >
           <Button
             variant="outline"
+            _hover={{ borderTop: "none", textDecor: "none" }}
             as={Link}
             href="https://www.linkedin.com/in/mgispert/"
             w={"full"}
@@ -64,6 +65,7 @@ export const ContactMePage = () => {
           </Button>
           <Button
             variant="outline"
+            _hover={{ borderTop: "none", textDecor: "none" }}
             as={Link}
             href="https://github.com/mgispert"
             w={"full"}

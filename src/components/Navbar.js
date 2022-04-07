@@ -1,20 +1,19 @@
 import React from "react";
 import { Image, Button, Flex, Link } from "@chakra-ui/react";
 
-export const Navbar = ({ showAbout, showProjects, showContact }) => {
+export const Navbar = ({
+  onClickProjects,
+  onClickAbout,
+  onClickContact,
+  onClickMain,
+}) => {
   return (
     <Flex
       justifyContent={"space-between"}
       alignItems={"center"}
       margin={{ base: "0.5rem", sm: "1rem", md: "2rem" }}
     >
-      <Link
-        onClick={() => {
-          showAbout(false);
-          showProjects(false);
-          showContact(false);
-        }}
-      >
+      <Link onClick={onClickMain}>
         <Image
           src={"/images/ghostblue.png"}
           maxH={{ base: "70px", sm: "40px", md: "40px" }}
@@ -26,34 +25,13 @@ export const Navbar = ({ showAbout, showProjects, showContact }) => {
         gap={{ base: "0", sm: "1rem", md: "2rem" }}
         flexWrap="wrap"
       >
-        <Button
-          variant="outline"
-          onClick={() => {
-            showAbout(true);
-            showProjects(false);
-            showContact(false);
-          }}
-        >
+        <Button variant="outline" onClick={onClickAbout}>
           About
         </Button>
-        <Button
-          variant="outline"
-          onClick={() => {
-            showAbout(false);
-            showProjects(true);
-            showContact(false);
-          }}
-        >
+        <Button variant="outline" onClick={onClickProjects}>
           Projects
         </Button>
-        <Button
-          variant="outline"
-          onClick={() => {
-            showAbout(false);
-            showProjects(false);
-            showContact(true);
-          }}
-        >
+        <Button variant="outline" onClick={onClickContact}>
           Contact
         </Button>
       </Flex>

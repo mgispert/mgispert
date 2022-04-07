@@ -1,7 +1,7 @@
 import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 
-export const AboutMePage = ({ showProjects, showAbout, showContact }) => {
+export const AboutMePage = ({ onClickProjects }) => {
   return (
     <Flex
       flexDirection={"column"}
@@ -11,7 +11,11 @@ export const AboutMePage = ({ showProjects, showAbout, showContact }) => {
       height="100%"
       marginTop="3rem"
     >
-      <Heading textAlign="left" marginBottom="3rem" as={Flex}>
+      <Heading
+        textAlign="left"
+        marginBottom={{ base: "0", sm: "1rem", md: "3rem" }}
+        as={Flex}
+      >
         <Text variant="heading">About&nbsp;</Text>
         <Text
           as={"span"}
@@ -48,11 +52,8 @@ export const AboutMePage = ({ showProjects, showAbout, showContact }) => {
         variant="solid"
         padding="1rem"
         px={6}
-        onClick={() => {
-          showAbout(false);
-          showProjects(true);
-          showContact(false);
-        }}
+        onClick={onClickProjects}
+        marginBottom="1rem"
       >
         Check my last projects
       </Button>

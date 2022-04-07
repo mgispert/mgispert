@@ -9,33 +9,24 @@ import { Flex } from "@chakra-ui/react";
 import { useState } from "react";
 
 function App() {
-  const [isAboutShown, showAbout] = useState(false);
-  const [isProjectsShown, showProjects] = useState(false);
-  const [isContactShown, showContact] = useState(false);
+  const [screen, setScreen] = useState("main");
 
   return (
     <Flex className="App" flexDir="column" height="100%" flex="1">
       <Navbar
-        showAbout={showAbout}
-        showProjects={showProjects}
-        showContact={showContact}
+        onClickProjects={() => setScreen("projects")}
+        onClickAbout={() => setScreen("about")}
+        onClickContact={() => setScreen("contact")}
+        onClickMain={() => setScreen("main")}
       />
-      {isAboutShown ? (
-        <AboutMePage
-          showAbout={showAbout}
-          showProjects={showProjects}
-          showContact={showContact}
-        />
-      ) : isProjectsShown ? (
+      {screen === "about" ? (
+        <AboutMePage onClickProjects={() => setScreen("projects")} />
+      ) : screen === "projects" ? (
         <ProjectsPage />
-      ) : isContactShown ? (
+      ) : screen === "contact" ? (
         <ContactMePage />
       ) : (
-        <MainPage
-          showAbout={showAbout}
-          showProjects={showProjects}
-          showContact={showContact}
-        />
+        <MainPage onClickAbout={() => setScreen("about")} />
       )}
       <Footer />
     </Flex>
